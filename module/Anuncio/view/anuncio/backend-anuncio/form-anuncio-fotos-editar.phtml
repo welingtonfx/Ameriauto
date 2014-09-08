@@ -1,0 +1,38 @@
+<?php
+$foto1 = ($fotos['caminhoFoto1'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto1'] : false;
+$foto2 = ($fotos['caminhoFoto2'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto2'] : false;
+$foto3 = ($fotos['caminhoFoto3'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto3'] : false;
+$foto4 = ($fotos['caminhoFoto4'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto4'] : false;
+$foto5 = ($fotos['caminhoFoto5'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto5'] : false;
+$foto6 = ($fotos['caminhoFoto6'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto6'] : false;
+$foto7 = ($fotos['caminhoFoto7'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto7'] : false;
+$foto8 = ($fotos['caminhoFoto8'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto8'] : false;
+$foto9 = ($fotos['caminhoFoto9'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto9'] : false;
+$foto10 = ($fotos['caminhoFoto10'] !== "") ? $picsDirectory . '/' . $placa . '/' . $backendThumb . '/' . $fotos['caminhoFoto10'] : false;
+
+?>			
+			<fieldset><legend>FOTOS DO VEÍCULO</legend></fieldset>		
+			<?php for($i = 1; $i <= 10; $i++): 
+			$fotoExistente = (false !== ${'foto'.$i});
+			?>
+				<div class="form-group file-upload-row">
+					<?php echo $this->formLabel($form->get('caminhoFoto'.$i)); ?>
+					<div class="col-md-6">
+						<?php echo $this->formElement($form->get('caminhoFoto'.$i)); 
+							  if ($fotoExistente): ?>
+						<div class="alert alert-warning alert-upload-foto" role="alert"><span class="glyphicon glyphicon-arrow-up"></span>&nbsp;&nbsp;Para substituir esta foto, basta enviar uma nova.</div>
+						<?php
+							  endif;
+							  echo $this->formElementErrors($form->get('caminhoFoto'.$i)); ?>
+					</div>
+					<?php if ($fotoExistente): ?>
+					<div class="col-md-2">
+						<img class="img-thumb" src='<?php echo ${'foto'.$i}; ?>' />
+					</div>
+					<div class="col-md-2 centralize">
+						<small><?php echo $this->formLabel($form->get('deleteFoto'.$i)); ?></small>
+						<?php echo $this->formElement($form->get('deleteFoto'.$i)); ?>
+					</div>
+					<?php endif; ?>
+				</div>
+			<?php endfor; ?>

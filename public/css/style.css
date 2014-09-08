@@ -1,0 +1,171 @@
+body {
+    padding-top: 0;
+    padding-bottom: 40px;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+
+/* Ameriauto */
+body
+{
+	background: url("../img/layout/fndall.png") repeat;
+}
+
+.topo {
+	background: url("../img/layout/topofnd.png") repeat;
+	height: 62px;
+}
+
+.topo .logotipo {
+	padding: 11px 0 0 0;
+	float: left;
+}
+
+.message-box
+{
+	margin-top: 15px;
+}
+
+.input-large {
+	width: 400px;
+}
+
+.form-backend legend
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.form-backend > fieldset:first-child
+{
+	margin-top: 0;
+}
+
+.inputError
+{
+	color: red;
+}
+
+.btn-logoff
+{
+	float: right;
+	margin-top: 15px;
+}
+
+.rodape {
+	background: url("../img/layout/rdpfnd.png") repeat;
+	height: 100px;
+}
+
+.backendcontent {
+	margin-top: 10px;
+}
+
+.menuesquerdo
+{
+	margin-top: 10px;
+}
+
+.menuesquerdo .list-group-item {
+	padding: 4px 10px;
+}
+
+.backendopcionais li
+{
+	line-height: 1;
+	font-size: 12px;
+}
+
+.backendopcionais li:first-child
+{
+	margin-top: -10px;
+}
+
+.backendopcionais label
+{
+	padding-left: 4px;
+
+}
+
+.backendopcionais input[type='checkbox']
+{
+	margin-left: 2px;
+	margin-top: -2px;
+}
+
+.backendopcionais .active
+{
+	color: #fff;
+	padding: 12px 0 12px 10px;
+}
+
+.table-panel > thead > tr > th,
+.table-panel > tbody > tr > th,
+.table-panel > tfoot > tr > th,
+.table-panel > thead > tr > td,
+.table-panel > tbody > tr > td,
+.table-panel > tfoot > tr > td {
+  padding: 10px;
+}
+
+.img-thumb
+{
+	padding: 2px;
+	border: 1px solid #dddddd;
+}
+
+.alert-upload-foto
+{
+	margin-top: 5px;
+	padding: 8px 8px;
+	margin-bottom: 0;
+}
+
+.file-upload-row
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 1px;	
+}
+
+.delete-row-highlight
+{
+	background: url("../img/layout/fndselected.png") repeat;
+	color: #fff;
+}
+
+.centralize
+{
+	text-align: center;
+}

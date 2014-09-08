@@ -1,0 +1,42 @@
+<?php
+$anuncios = $this->anuncios;
+$uploadDir = $this->uploadDirectoryStructure;
+
+$semFotoCaminho = "./img/layout/semfoto.png";
+$picsDirectory =$this->basePath(). '/' . $uploadDir['upload_base'].'/'.$uploadDir['anuncio']['main-directory'];
+$backendThumb = $uploadDir['anuncio']['backend-thumbnail'];
+?>
+<div class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><?php echo $this->tituloPainel ?></h3></div>
+		<table class="table table-hover table-panel">
+			<thead>
+			<tr>
+				<th>Foto</th>
+				<th>Ve&iacute;culo</th>
+				<th>Descri&ccedil;&atilde;o</th>
+				<th>Valor</th>
+				<th class="centralize">Alterar an&uacute;ncio</th>
+				<th class="centralize">Apagar an&uacute;ncio</th>
+			</tr>
+			</thead>
+			
+			<tbody>
+			<?php foreach($anuncios as $anuncio): ?>
+			<?php $foto = ($anuncio['caminhoFoto1'] !== "") ? $picsDirectory . '/' . $anuncio['placa'] . '/' . $backendThumb . '/' . $anuncio['caminhoFoto1'] : $semFotoCaminho; ?>
+			<tr>
+				<td><img class="img-thumb" src=<?php echo $foto; ?> /></td>
+				<td>
+					<strong><?php echo $anuncio['nomeVeiculo'] . ' (' . $anuncio['ano'] . ')'; ?></strong><br/>
+					<small><?php echo $anuncio['nomeFabricante']; ?></small><br />
+					<small>[<?php echo $anuncio['placa']; ?>]</small>
+				</td>
+				<td><?php echo $anuncio['descricaoBreve']; ?></td>
+				<td><?php echo 'R$ ' . $anuncio['valor']; ?></td>
+				<td class="centralize"><a href="<?php echo $this->url('login/anuncios/action', array('action' => 'editar', 'id' => $anuncio['idAnuncio'])); ?>" class="btn btn-primary btn-md" role="button"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Alterar</a></td>
+				<td class="centralize"><a href="<?php echo $this->url('login/anuncios/action', array('action' => 'apagar', 'id' => $anuncio['idAnuncio'])); ?>" class="btn btn-danger btn-md" role="button"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Apagar</a></td>
+			</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+</div>

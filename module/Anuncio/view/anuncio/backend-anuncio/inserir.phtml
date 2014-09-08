@@ -1,0 +1,25 @@
+<?php
+$this->headScript()->prependFile($this->basePath() . '/js/backend_anuncio.js');
+
+$form = $this->form;
+$tituloPainel = $this->tituloPainel;
+
+$form->prepare();
+
+$this->formElementErrors()->setAttributes(array('class' => 'inputError'));
+
+?>
+<div class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><?php echo $this->tituloPainel ?></h3></div>
+		<div class="panel-body">
+			<?php echo $this->form()->openTag($form); ?>
+
+			<?php echo $this->partial('anuncio/backend-anuncio/form-anuncio-dados', array('form' => $this->form)); 
+				  echo $this->partial('anuncio/backend-anuncio/form-anuncio-fotos', array('form' => $this->form)); ?>
+			
+		</div>
+	<div class="panel-footer">
+		<?php echo $this->formElement($form->get('submit')); ?>
+	</div>
+<?php echo $this->form()->closeTag(); ?>
+</div>

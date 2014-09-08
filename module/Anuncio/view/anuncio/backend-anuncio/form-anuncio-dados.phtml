@@ -1,0 +1,234 @@
+			<?php // echo $this->formElement($form->get('security')) ?>
+			
+			<fieldset><legend>DADOS DO VE&Iacute;CULO</legend></fieldset>
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('idTipoVeiculo')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('idTipoVeiculo')); 
+						  echo $this->formElementErrors($form->get('idTipoVeiculo')); ?>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('idFabricante')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('idFabricante')); 
+						  echo $this->formElementErrors($form->get('idFabricante')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('idVeiculo')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('idVeiculo')); 
+						  echo $this->formElementErrors($form->get('idVeiculo')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('idCombustivel')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('idCombustivel')); 
+						  echo $this->formElementErrors($form->get('idCombustivel')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('idCor')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('idCor')); 
+						  echo $this->formElementErrors($form->get('idCor')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('descricaoBreve')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('descricaoBreve')); 
+						  echo $this->formElementErrors($form->get('descricaoBreve')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('ano')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('ano')); 
+						  echo $this->formElementErrors($form->get('ano')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('placa')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('placa')); 
+						  echo $this->formElementErrors($form->get('placa')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('quilometragem')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('quilometragem')); 
+						  echo $this->formElementErrors($form->get('quilometragem')); ?>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('valor')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('valor')); 
+						  echo $this->formElementErrors($form->get('valor')); ?>
+				</div>
+			</div>
+
+			<fieldset><legend>OPCIONAIS</legend></fieldset>			
+			<div class="form-group">				
+				<div class="col-md-3">
+					<ul class="list-group checkbox backendopcionais">
+						<li class="list-group-item active">Conforto</li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcArQuente'));
+							  							  echo $this->formLabel($form->get('opcArQuente')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcArCondicionado'));
+							  							  echo $this->formLabel($form->get('opcArCondicionado')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcArDigital'));
+							  							  echo $this->formLabel($form->get('opcArDigital')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcDirecaoHidraulica'));
+							  							  echo $this->formLabel($form->get('opcDirecaoHidraulica')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcDirecaoEletrica'));
+							  							  echo $this->formLabel($form->get('opcDirecaoEletrica')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcVidroEletricoFrontal'));
+							  							  echo $this->formLabel($form->get('opcVidroEletricoFrontal')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcVidroEletricoTraseiro'));
+							  							  echo $this->formLabel($form->get('opcVidroEletricoTraseiro')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcTravaEletrica'));
+							  							  echo $this->formLabel($form->get('opcTravaEletrica')); ?></li>	
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcBancoCouro'));
+							  							  echo $this->formLabel($form->get('opcBancoCouro')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcRetrovisoresEletricos'));
+							  							  echo $this->formLabel($form->get('opcRetrovisoresEletricos')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcRetrovisoresRebativeis'));
+							  							  echo $this->formLabel($form->get('opcRetrovisoresRebativeis')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcRetrovisorEletrocromico'));
+							  							  echo $this->formLabel($form->get('opcRetrovisorEletrocromico')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcCambioAutomatizado'));
+							  							  echo $this->formLabel($form->get('opcCambioAutomatizado')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcCambioAutomatico'));
+							  							  echo $this->formLabel($form->get('opcCambioAutomatico')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcCambioCVT'));
+							  							  echo $this->formLabel($form->get('opcCambioCVT')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcPaddleShift'));
+							  							  echo $this->formLabel($form->get('opcPaddleShift')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcTetoSolar'));
+							  							  echo $this->formLabel($form->get('opcTetoSolar')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcComputadorBordo'));
+							  							  echo $this->formLabel($form->get('opcComputadorBordo')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcControleSomVolante'));
+							  							  echo $this->formLabel($form->get('opcControleSomVolante')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcVolanteRegulagemAltura'));
+							  							  echo $this->formLabel($form->get('opcVolanteRegulagemAltura')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcVolanteRegulagemProfundidade'));
+							  							  echo $this->formLabel($form->get('opcVolanteRegulagemProfundidade')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcVolanteRevestidoCouro'));
+							  							  echo $this->formLabel($form->get('opcVolanteRevestidoCouro')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcPilotoAutomatico'));
+							  							  echo $this->formLabel($form->get('opcPilotoAutomatico')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcSensorChuva'));
+							  							  echo $this->formLabel($form->get('opcSensorChuva')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcBancoRegulagemAltura'));
+							  							  echo $this->formLabel($form->get('opcBancoRegulagemAltura')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcCDPlayer'));
+							  							  echo $this->formLabel($form->get('opcCDPlayer')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcRadioBluetooth'));
+							  							  echo $this->formLabel($form->get('opcRadioBluetooth')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcRadioMP3'));
+							  							  echo $this->formLabel($form->get('opcRadioMP3')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcTocaFitas'));
+							  							  echo $this->formLabel($form->get('opcTocaFitas')); ?></li>			  
+					</ul>
+				</div>
+
+				<div class="col-md-3">
+					<ul class="list-group checkbox backendopcionais">
+						<li class="list-group-item active">Seguran&ccedil;a</li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcAlarme'));
+							  							  echo $this->formLabel($form->get('opcAlarme')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcABS'));
+							  							  echo $this->formLabel($form->get('opcABS')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcControleEstabilidade'));
+							  							  echo $this->formLabel($form->get('opcControleEstabilidade')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcAirbagsFrontais'));
+							  							  echo $this->formLabel($form->get('opcAirbagsFrontais')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcAirbagsLaterais'));
+							  							  echo $this->formLabel($form->get('opcAirbagsLaterais')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcAirbagsCortina'));
+							  							  echo $this->formLabel($form->get('opcAirbagsCortina')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcAirbagsJoelho'));
+							  							  echo $this->formLabel($form->get('opcAirbagsJoelho')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcIsofix'));
+							  							  echo $this->formLabel($form->get('opcIsofix')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcHillHolder'));
+							  							  echo $this->formLabel($form->get('opcHillHolder')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcDisco4Rodas'));
+							  							  echo $this->formLabel($form->get('opcDisco4Rodas')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcProtetorCarter'));
+							  							  echo $this->formLabel($form->get('opcProtetorCarter')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcFarolMilha'));
+							  							  echo $this->formLabel($form->get('opcFarolMilha')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcFarolNeblina'));
+							  							  echo $this->formLabel($form->get('opcFarolNeblina')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcFarolXenon'));
+							  							  echo $this->formLabel($form->get('opcFarolXenon')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcBloqueioTracao'));
+							  							  echo $this->formLabel($form->get('opcBloqueioTracao')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcBlindado'));
+							  							  echo $this->formLabel($form->get('opcBlindado')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcSensorEstacionamentoTraseiro'));
+							  							  echo $this->formLabel($form->get('opcSensorEstacionamentoTraseiro')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcSensorEstacionamentoDianteiro'));
+							  							  echo $this->formLabel($form->get('opcSensorEstacionamentoDianteiro')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcParkAssist'));
+							  							  echo $this->formLabel($form->get('opcParkAssist')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcTracaoQuatroRodas'));
+							  							  echo $this->formLabel($form->get('opcTracaoQuatroRodas')); ?></li>		  							  
+					</ul>
+				</div>
+
+				<div class="col-md-3">
+					<ul class="list-group checkbox backendopcionais">
+						<li class="list-group-item active">Est&eacute;tica</li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcCalotas'));
+							  							  echo $this->formLabel($form->get('opcCalotas')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcRodasLigaLeve'));
+							  							  echo $this->formLabel($form->get('opcRodasLigaLeve')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcInsufilm'));
+							  							  echo $this->formLabel($form->get('opcInsufilm')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcParachoqueCorVeiculo'));
+							  							  echo $this->formLabel($form->get('opcParachoqueCorVeiculo')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcPainelDigital'));
+							  							  echo $this->formLabel($form->get('opcPainelDigital')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcCentralMultimidia'));
+							  							  echo $this->formLabel($form->get('opcCentralMultimidia')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcDVDPlayer'));
+							  							  echo $this->formLabel($form->get('opcDVDPlayer')); ?></li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcAerofolio'));
+							  							  echo $this->formLabel($form->get('opcAerofolio')); ?></li>				  
+					</ul>
+				</div>
+				
+				<div class="col-md-3">
+					<ul class="list-group checkbox backendopcionais">
+						<li class="list-group-item active">Outros</li>
+						<li class="list-group-item"><?php echo $this->formElement($form->get('opcBau'));
+							  							  echo $this->formLabel($form->get('opcBau')); ?></li>				  
+					</ul>	
+				</div>
+			</div>
+
+			<fieldset><legend>DESCRIÇÃO ADICIONAL (coloque aqui &iacute;tens adicionais e informa&ccedil;&otilde;es importantes sobre o ve&iacute;culo)</legend></fieldset>			
+			<div class="form-group">
+				<?php echo $this->formLabel($form->get('descricaoAdicional')); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('descricaoAdicional')); 
+						  echo $this->formElementErrors($form->get('descricaoAdicional')); ?>
+				</div>
+			</div>

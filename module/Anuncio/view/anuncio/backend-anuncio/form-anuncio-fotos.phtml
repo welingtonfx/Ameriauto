@@ -1,0 +1,10 @@
+			<fieldset><legend>FOTOS DO VEÍCULO</legend></fieldset>
+			<?php for ($i = 1; $i <= 10; $i++): ?>
+			<div class="form-group file-upload-row">
+				<?php echo $this->formLabel($form->get('caminhoFoto'.$i)); ?>
+				<div class="col-md-10">
+					<?php echo $this->formElement($form->get('caminhoFoto'.$i)); 
+						  echo $this->formElementErrors($form->get('caminhoFoto'.$i)); ?>
+				</div>
+			</div>
+			<?php endfor; ?>
