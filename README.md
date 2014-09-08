@@ -3,75 +3,25 @@ Ameriauto
 
 Introduction
 ------------
-This is a simple, skeleton application using the ZF2 MVC layer and module
-systems. This application is meant to be used as a starting place for those
-looking to get their feet wet with ZF2.
+Ameriauto is a Classified Ads Website made entirely using Zend Framework 2.
+Its main objective is aggregate Cars and other vehicle Ads 
+from major resellers from Americana (SP) and nearby cities.
 
-Installation
-------------
+The version 1 of the application is made with 7 main modules.
+Some of them are specific to the service the application provides
+and others are more general and might be easily reused in other projects.
 
-Using Composer (recommended)
-----------------------------
-The recommended way to get a working copy of this project is to clone the repository
-and use `composer` to install dependencies using the `create-project` command:
+Modules and brief descriptions:
+- Anuncio - Provides the structure for managing the website Classifieds.
 
-    curl -s https://getcomposer.org/installer | php --
-    php composer.phar create-project -sdev --repository-url="https://packages.zendframework.com" zendframework/skeleton-application path/to/install
+- Application - General configurations of the website.
 
-Alternately, clone the repository and manually invoke `composer` using the shipped
-`composer.phar`:
+- Imagem - Provides Image Resizing service. Proportional, Crop and Fixed resizing modes provided. Can be easily extended and used in any kind of project.
 
-    cd my/project/dir
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git
-    cd ZendSkeletonApplication
-    php composer.phar self-update
-    php composer.phar install
+- Log - Provides log and auditing services. Can be easily used in other projects.
 
-(The `self-update` directive is to ensure you have an up-to-date `composer.phar`
-available.)
+- Mail - Provides email message service. Can be easily used in other projects.
 
-Another alternative for downloading the project is to grab it via `curl`, and
-then pass it to `tar`:
+- Usuario - Provides user login/registration services.
 
-    cd my/project/dir
-    curl -#L https://github.com/zendframework/ZendSkeletonApplication/tarball/master | tar xz --strip-components=1
-
-You would then invoke `composer` to install dependencies per the previous
-example.
-
-Using Git submodules
---------------------
-Alternatively, you can install using native git submodules:
-
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git --recursive
-
-Web Server Setup
-----------------
-
-### PHP CLI Server
-
-The simplest way to get started if you are using PHP 5.4 or above is to start the internal PHP cli-server in the root directory:
-
-    php -S 0.0.0.0:8080 -t public/ public/index.php
-
-This will start the cli-server on port 8080, and bind it to all network
-interfaces.
-
-**Note: ** The built-in CLI server is *for development only*.
-
-### Apache Setup
-
-To setup apache, setup a virtual host to point to the public/ directory of the
-project and you should be ready to go! It should look something like below:
-
-    <VirtualHost *:80>
-        ServerName zf2-tutorial.localhost
-        DocumentRoot /path/to/zf2-tutorial/public
-        SetEnv APPLICATION_ENV "development"
-        <Directory /path/to/zf2-tutorial/public>
-            DirectoryIndex index.php
-            AllowOverride All
-            Order allow,deny
-            Allow from all
-        </Directory>
-    </VirtualHost>
+- Website - Beta service used to provide Website construction service to our clients.
